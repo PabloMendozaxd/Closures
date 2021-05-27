@@ -1,15 +1,17 @@
-const saludar= function (nombre) {
-    return "Hola"+nombre; 
+function makeAdder(x) {
+  return function(y) {
+    return x + y;
+  };
 }
 
-const a = "Hey! ";
-function global() {
-    const b = " ¿Qué ";
-    function local() {
-        const c="tal?";
-        return a+b+c;
-    }
-    return local;
+
+function useAdder() {
+  let firstValue=document.getElementById("firstValue");
+  console.log(typeof(firstValue.value))
 }
 
-const closure=global();
+// var add5 = makeAdder(5);
+// var add10 = makeAdder(10);
+
+// console.log(add5(2));  // 7
+// console.log(add10(2)); // 12

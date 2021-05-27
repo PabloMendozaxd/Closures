@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closures</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="topnav">
+        <a href="#home">Closures</a>
+        <a href="#news">Glosary</a>
+        <a href="#contact">Examples</a>
+    </header>
+      <section>
+        <a name="home">
+          <h1>Closures</h1>
+          <p> Acording to the MDN definition, a closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+          Whit that definition itself would be hard to really understand what is a closure, even more if you are not familiarized with the nenxt concepts:
+          </p>
+     </section>
+      <section>
+        <a name="news">
+          <h2>Glosary</h2>
+          <ul>
+            <li>Function:</li>
+            <p>Is a block of code designed to perform a particular task and is executed when "something" invokes it (calls it).</p>
+            <li>Scope:</li>
+            <p>Is what manages the accesibility of variables.
+                In JavaScript, a scope is created by a functio or a code block.
+                It is also possible to reuse variables ames i differet scopes without collisions.
+            </p>
+            <li>Lexical Eviroment:</li>
+            <p>It's the internal js engine construct that holds identifier-variable mapping. A lexical environment also holds a reference to a parent lexical environment.</p>
+          </ul>
+        </section>
+      <section>
+        <a name="contact">
+          <h3>Examples</h3>
+          <p>Given the next function, lets analize how a closure works</p>
+          <pre>
+function makeAdder(x) {
+    return function(y) {
+      return x + y;
+    };
+          </pre>
+          <p>In this example, we have defined a function makeAdder(x), that takes a single argument "x", and returns a new function. The function it returns takes a single argument "y", and returns the sum of x and y.
+        </p>
+          <input type="text" id="firstValue">
+          <input type="text">
+          <button onclick="useAdder()">Calculate</button>
+        </section>
     <script src="script.js"></script>
 </body>
 </html>
