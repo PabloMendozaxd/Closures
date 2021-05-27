@@ -46,10 +46,14 @@ function makeAdder(x) {
     };
           </pre>
           <p>In this example, we have defined a function makeAdder(x), that takes a single argument "x", and returns a new function. The function it returns takes a single argument "y", and returns the sum of x and y.
+          Anyway, lets try it, lets start using makeAdder()
         </p>
           <input type="text" id="firstValue">
-          <input type="text">
-          <button onclick="useAdder()">Calculate</button>
+          <input type="text" id="secondValue">
+          <button onclick="addFirstValue()">Add First Value</button>
+          <p>In essence, makeAdder is a function factory. It creates functions that can add a specific value to their argument. In the above example, the function factory creates two new functions—one that adds the first input's value to its argument, and one that adds the second.</p>
+
+        <p>The functios created are both closures. They share the same function body definition, but store different lexical environments. In the first's lexical environment, x is the first value, while in the lexical environment for inner function, x is the second value.</p>
         </section>
     <script src="script.js"></script>
 </body>

@@ -34,3 +34,8 @@ pre {
     padding: 24px;
     width: 100%;
   }
+  #firstValueAdded{
+      height: 50px;
+      width: 100%;
+      border: 1px solid black;
+  }

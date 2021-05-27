@@ -5,13 +5,9 @@ function makeAdder(x) {
 }
 
 
-function useAdder() {
-  let firstValue=document.getElementById("firstValue");
-  console.log(typeof(firstValue.value))
+function addFirstValue() {
+  let firstValue=makeAdder(parseInt(document.getElementById("firstValue").value,10));
+alert("At this moments, the functions value is:   "+firstValue+"  So, its not oly a function it also has access to the external scope...Lets add the second value!");
+alert("By adding a value to the function created, the inner function can use the inner and outer values to calculate..."+firstValue(parseInt(document.getElementById("secondValue").value,10)));
 }
 
-// var add5 = makeAdder(5);
-// var add10 = makeAdder(10);
-
-// console.log(add5(2));  // 7
-// console.log(add10(2)); // 12
