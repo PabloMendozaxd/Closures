@@ -1,3 +1,15 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -20,7 +32,7 @@
   }
   
 section{
-    height: 400px;
+    height: 250px;
     display: block;
 }
 pre {

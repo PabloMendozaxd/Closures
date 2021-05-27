@@ -38,7 +38,7 @@
       <section>
         <a name="contact">
           <h3>Examples</h3>
-          <p>Given the next function, lets analize how a closure works</p>
+          <p style="font-weight: bold;">Given the next function, lets analize how a closure works</p>
           <pre>
 function makeAdder(x) {
     return function(y) {
@@ -54,6 +54,18 @@ function makeAdder(x) {
           <p>In essence, makeAdder is a function factory. It creates functions that can add a specific value to their argument. In the above example, the function factory creates two new functions—one that adds the first input's value to its argument, and one that adds the second.</p>
 
         <p>The functios created are both closures. They share the same function body definition, but store different lexical environments. In the first's lexical environment, x is the first value, while in the lexical environment for inner function, x is the second value.</p>
+
+        <p style="font-weight: bold;">Practical closures</p>
+        <p>Closures are useful because they let you associate data (the lexical environment) with a function that operates on that data. This has obvious parallels to object-oriented programming, where objects allow you to associate data (the object's properties) with one or more methods.
+
+          Consequently, you can use a closure anywhere that you might normally use an object with only a single method.
+          
+          Situations where you might want to do this are particularly common on the web. Much of the code written in front-end JavaScript is event-based. You define some behavior, and then attach it to an event that is triggered by the user (such as a click or a keypress). The code is attached as a callback (a single function that is executed in response to the event).
+          size12, size14, and size16 are now functions that resize the body text to 12, 14, and 16 pixels, respectively.</p>
+
+        <a href="#" id="size-12">12</a>
+        <a href="#" id="size-14">14</a>
+        <a href="#" id="size-16">16</a>
         </section>
     <script src="script.js"></script>
 </body>
